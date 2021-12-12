@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    body {background-image: url("https://opengameart.org/sites/default/files/spacefield_a-000-preview.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;}    
+    .All {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+            
+    }
+    .vaisseaux img{
+        width:45%;
+        height:23%;
+    }
+
+    .enemies img{
+        width:70%;
+        height:28%;
+    }
+    
+    .vaisseaux {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        
+        
+    }
+    .enemies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }   
+
+    .mesboutons {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .ClassBase{
+        width: 500px;
+        border: 10px;
+        padding: 5px 20px;
+        border-radius: 30px;
+        border: 10px black;
+        color: white;
+        transition: 0.5s;
+
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+
+    }
+
+    .AllInfoV{
+        display:flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+    }
+
+    .HUDVaisseau{
+        width: 100px;
+        border: 10px;
+        padding: 5px 20px;
+        border-radius: 30px;
+        border: 10px black;
+        color: white;
+        transition: 0.5s;
+        background-color: rgb(121, 121, 121);
+
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+
+    }
+
+    .AllInfoE{
+        display:flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+    }
+
+    .HUDEnemie{
+        width: 80px;
+        border: 10px;
+        padding: 5px 20px;
+        border-radius: 30px;
+        border: 10px black;
+        color: white;
+        transition: 0.5s;
+        background-color: rgb(65, 1, 1);
+
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+
+    }
+
+    .Mana{
+        width: 50%;
+        color: rgb(0, 21, 214);
+    }
+
+    .PV{
+        width: 50%;
+        color: rgb(255, 255, 255);
+    }
+
+    .HUD {
+       visibility: hidden;
+       opacity: 0;
+    }
+
+    .BoutonFINdeTour{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+   
+    .AtSpInfo{
+        display: flex;
+        align-items: flex-end;
+    }
+
+
+    </style>
+    <body>
+        <div class=All>
+            <div class="BoutonFINdeTour">
+                <button id="btn-findetour">Fin de Tour</button>
+            </div>
+            <div class="AllInfoV"> 
+                <div class="HUDVaisseau" id="InfoV1">
+                    <div class="PV"><span id=PVVaisseau1>50</span>/50 PV</div>
+                    <div class="Mana"><span id=ManaVaisseau1>10</span>/10 Mana</div>
+                </div>
+                <div class="HUDVaisseau" id="InfoV2">
+                    <div class="PV"><span id=PVVaisseau2>50</span>/50 PV</div>
+                    <div class="Mana"><span id=ManaVaisseau2>10</span>/10 Mana</div>
+                </div>
+                <div class="HUDVaisseau" id="InfoV3">
+                    <div class="PV"><span id=PVVaisseau3>50</span>/50 PV</div>
+                    <div class="Mana"><span id=ManaVaisseau3>10</span>/10 Mana</div>
+                </div>
+                <div class="HUDVaisseau" id="InfoV4">
+                    <div class="PV"><span id=PVVaisseau4>50</span>/50 PV</div>
+                    <div class="Mana"><span id=ManaVaisseau4>10</span>/10 Mana</div>
+                </div>
+            </div>
+            <div class=vaisseaux>
+                <img id="perso1" src="spaceship1.png">
+                <img id="perso2" src="spaceship2.png">
+                <img id="perso3" src="spaceship3.png">
+                <img id="perso4" src="spaceship4.png">
+            </div>
+            <div class=enemies>
+                <img id="enemie1" src="spacebase1.png" >
+                <img id="enemie2" src="spacebase1.png" >
+                <img id="enemie3" src="spacebase1.png" >
+            </div>
+            <div class="AllInfoE"> 
+                <div class="HUDEnemie" id="InfoE1">
+                    <div class="PV"><span id=PVEnemie1>50</span>/50 PV</div>
+                </div>
+                <div class="HUDEnemie" id="InfoE2">
+                    <div class="PV"><span id=PVEnemie2>50</span>/50 PV</div>
+                </div>
+                <div class="HUDEnemie" id="InfoE3">
+                    <div class="PV"><span id=PVEnemie3>50</span>/50 PV</div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="HUD ClassBase" id="HUD">
+            <div class="mesboutons">
+                <button id="btn-attaque">Attaque</button>
+            
+                <button id="btn-defense">Défense</button>
+
+                <button id="btn-attaqueSpe">Attaque Spé</button>
+            </div>
+            <div class="AtSpInfo" id="AtSpéInfo">
+                A
+            </div>
+        </div>
+           
+
+        
+        <script src="RPG_JS.js"async></script>
+    </body>
+
+</html>
